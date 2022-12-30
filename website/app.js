@@ -16,7 +16,7 @@ generateBtn.addEventListener('click', () => {
       return res.json();
     })
     .then((data) => {
-      postData('/', data);
+      postData('/all', data);
       return data;
     })
     // Dynamically Update UI

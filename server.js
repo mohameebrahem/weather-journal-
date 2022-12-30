@@ -7,11 +7,10 @@ const express = require('express');
 const app = express();
 
 // GET route that returns the projectData object in server code
-app.get('/', (req, res) => {
-  res.send(projectData);
-});
+const sendData = (req, res) => res.send(projectData);
+app.get('/all', sendData);
 // POST route that adds incoming data to projectData.
-app.post('/', addData);
+app.post('/all', addData);
 
 function addData(req, res) {
   projectData = req.body;
